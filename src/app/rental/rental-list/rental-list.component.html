@@ -1,0 +1,12 @@
+<section class="choose" id="services">
+	<div class="container py-md-3">
+		<h3 class="heading mb-5"> Your Home All Around the India...</h3>
+		<div class="feature-grids row">
+
+			<div class="col-lg-3 col-sm-6 " *ngFor="let rental of rentals">
+				<bmw-rental-list-item [rental]="rental"></bmw-rental-list-item>
+			</div>
+		
+		</div>
+	</div>		
+</section>
