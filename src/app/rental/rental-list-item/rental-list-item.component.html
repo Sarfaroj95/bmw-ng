@@ -1,8 +1,8 @@
-<a routerLink="/rentals/{{rental.id}}">
+<a routerLink="/rentals/{{rental._id}}">
 <div class="card">
-	<img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168_960_720.jpg" alt="Card image cap">
+	<img class="card-img-top" src="{{rental.image}}" alt="Card image cap">
 	<div class="card-body">
-		<h6 class="card-subtitle text-success">{{rental.category}} &#183; {{rental.city}}</h6>
+		<h6 class="card-subtitle text-success">{{rental.shared ? 'Shared' : 'Whole'}} {{rental.category}} &#183; {{rental.city}}</h6>
 	<h5 class="card-title">{{rental.title}}</h5>
 	<p class="card-text text-muted">$ {{rental.dailyRate}} Per Night</p>
 	<a routerLink="/rentals/{{rental.id}}" class="btn btn-primary btn-sm btn-block">More Info</a>

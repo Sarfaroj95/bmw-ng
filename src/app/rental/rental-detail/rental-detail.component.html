@@ -1,9 +1,51 @@
-<div *ngIf="rental">
-	<p> {{rental.id}} </p>
-	<p> {{rental.title}} </p>
-	<p> {{rental.city}} </p>
-	<p> {{rental.street}} </p>
-	<p> {{rental.category}} </p>
-	<p> {{rental.description}} </p>
-	<p> $ {{rental.dailyRate}} </p>
+
+
+<section id="rentalDetail" *ngIf="rental">
+	<div class="upper-section">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="{{rental.image}}" alt="">
+			</div>
+			<div class="col-md-6">
+				<!-- replased with map -->
+				<img src="{{rental.image}}" alt="">
+			</div>
+		</div>
+	</div>
+
+
+<div class="details-section mt-4">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="rental">
+				<h6 class="rental-type {{rental.category}} text-uppercase text-danger">{{rental.shared ? 'Shared' : 'Whole'}} {{rental.category}}</h6>
+				<h1 class="rental-title">{{rental.title}}</h1>
+				<h4 class="rental-city">{{rental.city}}</h4>
+				<div class="rental-room-info">
+					<span><i class="rm fa fa-building"> </i> {{ rental.bedrooms }} bedrooms </span>
+					<span><i class="rm fa fa-user"> </i> {{ rental.bedrooms + 4 }} guests </span>
+					<span><i class="rm fa fa-bed"> </i> {{ rental.bedrooms + 2 }} beds </span>
+				</div>
+				<p class="rental-description">{{rental.description }}</p>
+				<hr>
+				<div class="rental-asset">
+					<h2 class="title">Assets</h2>
+					<div class="row">
+						<div class="col-md-6 titles">
+							<span><i class="subas fa fa-asterisk"></i> Cooling</span><br>
+							<span><i class="subas fa fa-thermometer"></i> Heating</span><br>
+							<span><i class="subas fa fa-location-arrow"></i> Iron</span>
+						</div>
+						<div class="col-md-6">
+							<span><i class="subas fa fa-desktop"></i> Warking Area</span><br>
+							<span><i class="subas fa fa-slack"></i> Washing Machine</span><br>
+							<span><i class="subas fa fa-cube"></i> Dishwasher</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 h3 text-uppercase text-center">Booking</div>
+	</div>
 </div>
+</section>
