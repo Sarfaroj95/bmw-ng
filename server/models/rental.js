@@ -10,7 +10,7 @@ const rentalSchema = new Schema({
 	bedrooms: Number,
 	shared: Boolean,
 	description: { type: String, requied: true},
-	deilyRate: Number,
+	dailyRate: Number,
 	createdAt: { type: Date, default: Date.now },
 	user: {type: Schema.Types.ObjectId, ref: 'User'},
 	bookings: [{type: Schema.Types.ObjectId, ref: 'Booking'}]

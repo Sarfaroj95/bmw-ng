@@ -12,7 +12,7 @@ const Rental = require('./models/rental');
         bedrooms: 4,
         shared: true,
         description: "very nice apartment in center og city",
-        dailyRate: 23
+        dailyRate: 30
   		},
       {
         title: "Nice Apartment",
