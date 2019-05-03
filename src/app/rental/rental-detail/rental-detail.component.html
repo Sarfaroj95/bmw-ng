@@ -1,16 +1,16 @@
 
 
 <section id="rentalDetail" *ngIf="rental">
-	<div class="upper-section">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
-				<img src="{{rental.image}}" alt="">
-			</div>
-			<div class="col-md-6">
-				<!-- replased with map -->
-				<img src="{{rental.image}}" alt="">
-			</div>
+		<div class="col-md-6 ">
+			<!-- <img src="{{rental.image}}" alt="" class="img-responsive"> -->
+			<div class="img shadow-lg rounded"><img src="{{rental.image}}" class="img-fluid" alt="Responsive image"></div>
 		</div>
+		<div class="col-md-6">
+				<bmw-map [location]="rental.city + ', '  + rental.street"></bmw-map>
+		</div>
+	</div>
 	</div>
 
 

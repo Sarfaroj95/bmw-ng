@@ -10,7 +10,8 @@ import { RegisterComponent } from './auth/register/register.component';
 
 import { RentalComponent } from './rental/rental.component';
 
-import { RentalModule } from './rental/rental.module'; 
+import { RentalModule } from './rental/rental.module';
+
 
 const routes : Routes = [
         {path: '', redirectTo: './rentals', pathMatch: 'full'}
