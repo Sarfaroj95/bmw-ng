@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../auth/shared/auth.service';
 
 @Component({
 	selector: "bmw-header",
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent{
-	
+	constructor(private auth: AuthService) {}
+
+	logout() {
+		this.auth.logout();
+	}
 }
